@@ -5,20 +5,12 @@
 //------------------------------------
 
 // Font Family
-$f-main: 'Noto Serif JP',
-serif;
+$f-main: "Noto Sans JP",
+sans-serif;
 
-// Font Noto Serif
-$f-Serif: 'Noto Serif JP',
-serif;
-
-// Font Marcellus
-$f-marcellus: 'Marcellus',
-serif;
-
-// Font EB Garamond
-$f-eb-garamond: 'EB Garamond',
-serif;
+// Font outfit
+$f-outfit: "Outfit",
+sans-serif;
 
 // root Size
 $fz-root: 16;
@@ -47,17 +39,15 @@ $lh-main: 1.75;
 //-----------------------------------
 //Color
 //-----------------------------------
-$c-base: #000;
-$c-black:#111;
+$c-base: #333;
+$c-black:#4D2B1B;
 $c-white:#ffffff;
-$c-blue:#0071CE;
-$c-green-on:#46C4DB;
-$c-green-buy:#5DD5AB;
-$c-green-arrow:#00AFBF;
-$c-li-green:#DBF7F9;
-$c-gray:#F0F4FF;
-$c-gray-dot:#eee;
-
+$c-pink:#fa7da3;
+$c-pink-back:#FDF0F5;
+$c-green:#49c43d;
+$c-yellow:#FFFD7A;
+$c-yellow-be:#FFFEDD;
+$c-blue:#50BFFF;
 //-----------------------------------
 //Pass
 //-----------------------------------

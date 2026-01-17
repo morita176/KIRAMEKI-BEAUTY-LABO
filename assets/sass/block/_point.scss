@@ -4,72 +4,310 @@
 /* point
 ------------------------------------------ */
 .point {
-  position: relative;
-  overflow: hidden;
+  background-color: v.$c-pink-back;
+  padding-top: f.rem(33);
+  padding-bottom: f.rem(30);
 
-  @media screen and (min-width: 550px) {
-    height: f.rem(550);
-  }
-  @media screen and (min-width: 1499px) {
-    height: auto;
-  }
-
-  &__img {
-    width: 100%;
-    height: 100%;
-
-    & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 40% 80%;
-    }
+  @include v.mq(pc) {
+    padding-top: f.rem(45);
+    padding-bottom: f.rem(61);
   }
 
-  &__content {
-    position: absolute;
-    color: v.$c-white;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  &__container {
+    margin-top: f.rem(20);
 
     @include v.mq(pc) {
-      max-width: f.rem(462);
-      left: auto;
-      right: 15.5%;
-      top: 51%;
-      transform: translateY(-51%);
+      margin-top: f.rem(43);
+    }
+  }
+
+  &__content1,
+  &__content2,
+  &__content3 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    @media screen and (min-width: 950px) {
+      width: f.rem(780);
+    }
+  }
+
+  // コンテンツ1
+  &__text {
+    font-size: clamp(f.rem(18), calc(6.68px + 2.65vw), f.rem(28));
+    padding: f.rem(9) 0 f.rem(10);
+
+    @include v.mq(pc) {
+      padding: f.rem(15) 0;
+    }
+  }
+
+  &__text2 {
+    padding: f.rem(14) f.rem(20) f.rem(16);
+    font-size: clamp(14px, calc(6.78px + 1.85vw), 21px);
+
+    @include v.mq(pc) {
+      padding: f.rem(24) f.rem(41) f.rem(36);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    column-gap: clamp(22px, calc(2.4px + 5.03vw), 41px);
+    margin-top: f.rem(11);
+    text-align: center;
+
+    @include v.mq(pc) {
+      margin-top: f.rem(26);
     }
 
-
-    & h2 {
-      font-size: clamp(f.rem(30), 1.5rem + 1vw, f.rem(38));
-      font-weight: v.$f-bold;
-      text-align: center;
-      line-height: 1.7;
+    &--top {
+      letter-spacing: .5px;
 
       @include v.mq(pc) {
-        text-align: left;
-        line-height: 1.5;
+        letter-spacing: 0;
       }
     }
 
-    & h3 {
-      font-size: f.rem(24);
-      font-weight: v.$f-semibold;
-      text-align: center;
-      padding-bottom: clamp(f.rem(9), 0.5rem + 0.2vw, f.rem(11));
+    &--box1,
+    &--box2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: f.rem(143);
+      height: f.rem(85);
+      margin-bottom: 6px;
 
       @include v.mq(pc) {
-        text-align: left;
-        line-height: 2;
+        width: f.rem(232);
+        height: f.rem(137);
+        margin-bottom: 9px;
       }
     }
 
-    & p {
+    &--box1 {
+      border: 1px solid v.$c-pink;
+      padding: f.rem(19) f.rem(34) f.rem(18) f.rem(35);
+
+      @include v.mq(pc) {
+        padding: f.rem(32) f.rem(30) f.rem(32) f.rem(38);
+      }
+    }
+
+    &--box2 {
+      border: 1px solid #666;
+      background-color: v.$c-pink-back;
+      font-size: f.rem(18);
+      letter-spacing: 2px;
+
+      @include v.mq(pc) {
+        font-size: f.rem(29);
+        letter-spacing: 0;
+      }
+    }
+
+    &--text {
       font-size: f.rem(14);
-      line-height: calc(32 / 14);
+      text-align: center;
+    }
+  }
+
+  // コンテンツ2
+  &__content2 {
+    margin-top: f.rem(31);
+
+    @include v.mq(pc) {
+      margin-top: f.rem(50);
+    }
+  }
+
+  &__box {
+    font-size: f.rem(14);
+    padding-top: f.rem(14);
+    padding-bottom: f.rem(16);
+
+    @include v.mq(pc) {
+      padding-top: f.rem(24);
+      padding-bottom: f.rem(34);
+    }
+
+    &--p {
+      padding-left: f.rem(20);
+      padding-right: f.rem(20);
+
+      @include v.mq(pc) {
+        font-size: f.rem(21);
+        padding-left: f.rem(41);
+        padding-right: f.rem(41);
+        line-height: 1.7;
+      }
+    }
+  }
+
+  // 全身プラン
+  &__body {
+    position: relative;
+    padding-top: f.rem(20);
+
+    @include v.mq(pc) {
+      padding-top: f.rem(18);
+    }
+
+    & img {
+      padding: f.rem(24) f.rem(18) 0;
+
+      @include v.mq(pc) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 68.6%;
+        padding: f.rem(19) 0 f.rem(9);
+      }
+    }
+
+    &--text1,
+    &--text2,
+    &--text3,
+    &--text4,
+    &--text5,
+    &--text6,
+    &--text7,
+    &--text8,
+    &--text9 {
+      position: absolute;
+      text-align: center;
+      font-size: clamp(12px, calc(7.87px + 1.06vw), 16px);
+    }
+
+    &--text1 {
+      top: 17%;
+      left: calc(50% - 43px);
+
+      @include v.mq(pc) {
+        top: 13%;
+        left: calc(50% - 86px);
+      }
+    }
+
+    &--text2 {
+      top: 42%;
+      left: calc(50% - 25px);
+
+      @include v.mq(pc) {
+        top: 33.5%;
+        left: calc(50% - 60px);
+      }
+    }
+
+    &--text3 {
+      top: 51%;
+      left: calc(50% - 19px);
+
+      @include v.mq(pc) {
+        top: 50%;
+        left: calc(50% - 35px);
+      }
+    }
+
+    &--text4 {
+      bottom: 24%;
+      left: calc(50% - 23px);
+
+      @include v.mq(pc) {
+        bottom: 31%;
+        left: calc(50% - 71px);
+      }
+    }
+
+    &--text5 {
+      bottom: 16%;
+      left: calc(50% - 14px);
+
+      @include v.mq(pc) {
+        bottom: 27.5%;
+        left: calc(50% - 60px);
+      }
+    }
+
+    &--text6 {
+      bottom: 12%;
+      left: calc(50% - 20px);
+
+      @include v.mq(pc) {
+        bottom: 4%;
+        left: calc(50% - 89px);
+      }
+    }
+
+    &--text7 {
+      top: 27%;
+      right: 26px;
+
+      @include v.mq(pc) {
+        top: 21%;
+        right: 21.7%;
+      }
+    }
+
+    &--text8 {
+      top: 38%;
+      right: 23px;
+
+      @include v.mq(pc) {
+        top: 32.5%;
+        right: 17.6%;
+      }
+    }
+
+    &--text9 {
+      bottom: 25.5%;
+      right: 16px;
+
+      @include v.mq(pc) {
+        bottom: 47.5%;
+        right: 12.2%;
+      }
+    }
+  }
+
+  // 部分脱毛プラン
+  &__portion {
+    margin-top: f.rem(43);
+    font-size: f.rem(14);
+
+    &--inner {
+      margin-top: f.rem(25);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: f.rem(12);
+      row-gap: f.rem(18);
+    }
+
+    &--item {
+      & img {
+        width: f.rem(100);
+      }
+
+      & p {
+        text-align: center;
+        font-weight: v.$f-semibold;
+        color: v.$c-pink;
+        margin-top: 3px;
+      }
+    }
+  }
+
+  &__content3 {
+    margin-top: f.rem(30);
+    @include v.mq(pc) {
+      margin-top: f.rem(49);
+    }
+    & .point__text2{
+      padding-top: f.rem(27);
+      padding-bottom: f.rem(31);
     }
   }
 }

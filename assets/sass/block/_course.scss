@@ -1,0 +1,65 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* コース
+------------------------------------------ */
+.course {
+  margin-bottom: f.rem(20);
+
+  @include v.mq(pc) {
+    margin-bottom: f.rem(62);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: f.rem(30);
+    margin-top: f.rem(22);
+
+    @include v.mq(pc) {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: f.rem(37);
+    }
+
+    & .container__content {
+      width: 100%;
+
+      @include v.mq(pc) {
+        max-width: f.rem(350);
+      }
+    }
+  }
+
+  &__item {
+    font-size: f.rem(18);
+    color: v.$c-pink;
+    padding: f.rem(9) 0;
+
+    @include v.mq(pc) {
+      font-size: f.rem(28);
+    }
+  }
+
+  &__box {
+    font-size: f.rem(14);
+    padding: f.rem(16) f.rem(19) f.rem(20);
+
+    @include v.mq(pc) {
+      font-size: f.rem(18);
+      padding-top: f.rem(12);
+      padding-bottom: f.rem(18);
+    }
+
+    & p {
+      padding-bottom: f.rem(11);
+      line-height: 1.5;
+
+      @include v.mq(pc) {
+        line-break: anywhere;
+        padding-bottom: f.rem(14);
+      }
+    }
+  }
+
+}

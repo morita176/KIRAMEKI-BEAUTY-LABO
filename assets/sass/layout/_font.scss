@@ -2,13 +2,7 @@
 @use '../foundation/functions'as f;
 
 /* フォントの共通スタイル */
-// Font Marcellus
-.marcellus{
-  font-family: v.$f-marcellus;
-}
-
-
-// Font EB Garamond
-.eb{
-  font-family:v.$f-eb-garamond;
+// Font Outfit
+.outfit {
+  font-family: v.$f-outfit;
 }

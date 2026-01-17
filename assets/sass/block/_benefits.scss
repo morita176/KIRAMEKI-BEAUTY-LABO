@@ -1,0 +1,111 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* 特典
+------------------------------------------ */
+.benefits {
+  background-color: v.$c-yellow-be;
+  text-align: center;
+  padding: f.rem(16) 0 f.rem(14);
+  @include v.mq(pc) {
+    padding-top: 32px;
+  }
+
+  &__now {
+    color: v.$c-pink;
+    font-size: f.rem(21);
+    position: relative;
+
+    @include v.mq(pc) {
+      font-size: f.rem(34);
+      padding-left: f.rem(11);
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: 25px;
+      height: 2px;
+      content: "";
+      background-color: v.$c-pink;
+
+      @include v.mq(pc) {
+        width: 40px;
+      }
+    }
+
+    &::before {
+      left: calc((100% / 2) - 62px);
+      transform: translateY(18px) rotate(60deg);
+
+      @include v.mq(pc) {
+        left: calc((100% / 2) - 100px);
+        transform: translateY(30px) rotate(60deg);
+      }
+    }
+
+    &::after {
+      left: calc((100% / 2) + 39px);
+      transform: translateY(18px) rotate(-60deg);
+
+      @include v.mq(pc) {
+        left: calc((100% / 2) + 64px);
+        transform: translateY(30px) rotate(-60deg);
+      }
+    }
+  }
+
+  // コンテンツ
+  &__content {
+    max-width: f.rem(550);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: f.rem(9);
+    @include v.mq(pc) {
+      margin-top: f.rem(13);
+    }
+  }
+
+  &__text1 {
+    font-size: f.rem(21);
+
+    @include v.mq(pc) {
+      font-size: f.rem(32);
+      padding-bottom: 2px;
+    }
+  }
+
+  &__text2 {
+    font-size: f.rem(27);
+    color: v.$c-pink;
+    padding-left: f.rem(11);
+    padding-bottom: f.rem(3);
+
+    @include v.mq(pc) {
+      font-size: f.rem(44);
+      padding-left: f.rem(20);
+      padding-bottom: f.rem(4);
+    }
+
+    & span {
+      font-size: f.rem(42);
+      font-weight: v.$f-semibold;
+
+      @include v.mq(pc) {
+        font-size: f.rem(68);
+      }
+    }
+  }
+
+  // キャプション
+  &__text {
+    font-size: f.rem(10);
+    padding-top: f.rem(6);
+
+    @include v.mq(pc) {
+      font-size: f.rem(14);
+      padding-top: f.rem(15);
+    }
+  }
+}

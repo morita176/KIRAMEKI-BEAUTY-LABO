@@ -6,47 +6,91 @@
 .button {
     display: flex;
     align-items: center;
-    justify-content: center;
     border-radius: f.rem(40);
-    font-weight: v.$f-semibold;
-    font-size: f.rem(18);
     color: v.$c-white;
-    width: f.rem(300);
-    height: f.rem(58);
+    height: f.rem(32);
+    position: relative;
+    font-size: f.rem(12);
+    padding-left: f.rem(10);
+    letter-spacing: 0.6px;
 
-    &__on {
-        background-color: v.$c-green-on;
+    @include v.mq(pc) {
+        height: f.rem(51);
+        font-size: f.rem(21);
+        padding-left: f.rem(23);
+        letter-spacing: 0;
+    }
 
-        @media screen and (min-width: v.$width-main) {
-            margin-right: f.rem(32);
+    &__pink {
+        background-color: v.$c-pink;
+        width: f.rem(107);
+
+        @include v.mq(pc) {
+            width: f.rem(189);
         }
     }
 
-    &__buy {
-        background-color: v.$c-green-buy;
+    &__green {
+        background-color: v.$c-green;
+        width: f.rem(173);
+
+        @include v.mq(pc) {
+            width: f.rem(297);
+        }
+
+        &--text {
+            display: flex;
+            align-items: baseline;
+        }
+
+        &--s {
+            font-size: f.rem(10);
+
+            @include v.mq(pc) {
+                font-size: f.rem(19);
+            }
+        }
+    }
+
+    &__contact {
+        background-color: v.$c-green;
+        font-size: f.rem(21);
+        font-weight: v.$f-bold;
+        height: f.rem(80);
+        margin-top: f.rem(5);
+        padding-right: f.rem(11);
+        line-height: 1.4;
+        justify-content: center;
+        letter-spacing: 2px;
+
+        @include v.mq(pc) {
+            font-size: f.rem(34);
+            height: f.rem(130);
+            border-radius: f.rem(125);
+            margin-top: f.rem(9);
+            letter-spacing: 3.4px;
+            padding-right: f.rem(17);
+
+        }
     }
 }
 
-
-/* ページトップへ戻るボタン
------------------------------------------- */
-.button-to-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: f.rem(16);
-    right: 4%;
-    width: f.rem(40);
-    height: f.rem(42);
-    color: v.$c-white;
-    background-color: v.$c-blue;
-    @include v.mq(pc) {
-        right: 10%;
-    }
-}
-
-/* footer 上に来た時の状態 */
-.button-to-top.is-footer {
+.bi-chevron-right {
     position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include v.mq(pc) {
+        right: 10px;
+    }
+
+    &--contact {
+        font-size: f.rem(25);
+        right: f.rem(24);
+        @include v.mq(pc) {
+            font-size: f.rem(34);
+            right: 7%;
+        }
+    }
 }

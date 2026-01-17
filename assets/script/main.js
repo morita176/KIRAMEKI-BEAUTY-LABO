@@ -34,23 +34,16 @@ $(window).on('scroll resize', function () {
 // -------------------------------------------
 // スライド
 new Swiper('.swiper', {
+  // 初期表示を2枚目に
+  initialSlide: 1,
   slidesPerView: 'auto',
-  spaceBetween: 40,
+  // スライド間の幅
+  spaceBetween: 15,
   centeredSlides: true,
 
-  breakpoints: {
-    768: {
-      slidesPerGroup: 3, // PCでは3枚を1ページ扱い
-      centeredSlides: false,
-    }
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
   },
 });
 

@@ -1,0 +1,125 @@
+@use '../foundation/variables'as v;
+@use '../foundation/functions'as f;
+
+/* 見出し */
+h1 {
+  font-weight: v.$f-regular;
+  font-size: f.rem(42);
+  line-height: 1;
+  z-index: 10;
+  margin-top: f.rem(20);
+
+  @include v.mq(pc) {
+    font-size: clamp(f.rem(80), calc(-97.23px + 22.08vw), f.rem(122));
+  }
+}
+
+h2 {
+  font-weight: v.$f-regular;
+  font-size: f.rem(18);
+  line-height: 1;
+  z-index: 10;
+  text-align: center;
+  margin-top: f.rem(8);
+
+  @include v.mq(pc) {
+    font-size: clamp(f.rem(24), calc(-26.63px + 6.59vw), f.rem(36));
+    margin-top: f.rem(21);
+    transform: translateX(32.5%);
+  }
+
+}
+
+h3 {
+  color: v.$c-pink;
+  font-size: f.rem(32);
+  font-weight: v.$f-bold;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  line-height: 1.6;
+  letter-spacing: 1.4px;
+
+  @include v.mq(pc) {
+    font-size: f.rem(42);
+    margin-top: 7px;
+    letter-spacing: 0;
+  }
+
+  & img {
+    width: f.rem(37);
+
+    @include v.mq(pc) {
+      width: f.rem(55);
+      padding-right: 7px;
+    }
+  }
+}
+
+.h3 {
+  &__title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sub {
+    color: v.$c-black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: f.rem(18);
+    font-weight: v.$f-medium;
+
+    & img {
+      width: f.rem(196);
+      @include v.mq(pc) {
+        width: f.rem(263);
+      }
+    }
+  }
+
+  &__shape {
+    transform: scaleX(-1);
+    @include v.mq(pc) {
+    }
+  }
+
+  // 2つ目
+  &__sub2 {
+    font-size: f.rem(18);
+    padding-left: f.rem(4);
+
+    @include v.mq(pc) {
+      font-size: f.rem(21);
+      padding-left: f.rem(9);
+      letter-spacing: 3px;
+    }
+
+    &--2 {
+      column-gap: f.rem(7);
+      letter-spacing: 0.3px;
+      @include v.mq(pc) {
+        margin-top: f.rem(2);
+      }
+    }
+
+    &--3 {
+      column-gap: f.rem(16);
+      letter-spacing: 0.3px;
+    }
+  }
+}
+
+h4 {
+  font-size: f.rem(23);
+  color: #4D2C1C;
+  font-weight: v.$f-semibold;
+  text-align: center;
+
+  @include v.mq(pc) {
+    font-size: f.rem(24);
+  }
+}

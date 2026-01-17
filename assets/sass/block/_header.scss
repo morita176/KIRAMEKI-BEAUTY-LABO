@@ -4,18 +4,48 @@
 /* header
 ------------------------------------------ */
 .header {
-  position: absolute;
-  top: clamp(f.rem(17), 0.6rem + 1.2vw, f.rem(25));
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
+  padding: 0 f.rem(10);
+  background-color: v.$c-white;
 
-  & p {
-    font-size: clamp(f.rem(24), 1.2rem + 0.8vw, f.rem(28));
-    text-align: center;
-    letter-spacing: clamp(f.rem(5), 0.2rem + 0.3vw, f.rem(6));
-    padding-left: f.rem(4);
+  // ロゴ
+  &__logo img {
+    width: f.rem(75);
 
+    @include v.mq(pc) {
+      width: f.rem(98);
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    max-width: f.rem(1025);
+    margin-left: auto;
+    margin-right: auto;
+
+    &--list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: f.rem(59);
+
+      @include v.mq(pc) {
+        height: f.rem(91);
+      }
+    }
+
+    &--button {
+      display: flex;
+      column-gap: f.rem(10);
+
+      @include v.mq(pc) {
+        column-gap: f.rem(21);
+      }
+    }
   }
 }

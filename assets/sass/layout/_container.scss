@@ -3,9 +3,36 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 f.rem(17);
-  max-width: v.$width-wide;
-      @include v.mq(pc) {
-        padding: 0 f.rem(22);
-      }
+  padding: 0 f.rem(19) 0 f.rem(21);
+
+  @include v.mq(pc) {
+    padding: 0 f.rem(22);
+  }
+
+  // コンテンツ
+  &__content {
+    border: 1px solid v.$c-pink;
+    border-radius: 10px;
+    line-height: 1.4;
+
+    // 濃いピンク　白い文字
+    &--item1 {
+      background-color: v.$c-pink;
+      border-radius: 10px 10px 0 0;
+      color: v.$c-white;
+      text-align: center;
+    }
+
+    &--item2 {
+      background-color: v.$c-white;
+      border-radius: 0 0 10px 10px;
+    }
+
+    // 桃色　ピンク色文字
+    &--item3 {
+      background-color: v.$c-pink-back;
+      border-radius: 10px 10px 0 0;
+      text-align: center;
+    }
+  }
 }
