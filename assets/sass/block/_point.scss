@@ -28,6 +28,7 @@
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
+
     @media screen and (min-width: 950px) {
       width: f.rem(780);
     }
@@ -49,6 +50,13 @@
 
     @include v.mq(pc) {
       padding: f.rem(24) f.rem(41) f.rem(36);
+    }
+  }
+
+  &__text3 {
+    @include v.mq(pc) {
+      padding-top: f.rem(27);
+      padding-bottom: f.rem(31);
     }
   }
 
@@ -302,12 +310,9 @@
 
   &__content3 {
     margin-top: f.rem(30);
+
     @include v.mq(pc) {
       margin-top: f.rem(49);
-    }
-    & .point__text2{
-      padding-top: f.rem(27);
-      padding-bottom: f.rem(31);
     }
   }
 }

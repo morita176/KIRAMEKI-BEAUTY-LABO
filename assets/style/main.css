@@ -995,6 +995,12 @@ h4 {
     padding: 1.5rem 2.5625rem 2.25rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .point__text3 {
+    padding-top: 1.6875rem;
+    padding-bottom: 1.9375rem;
+  }
+}
 .point__item {
   display: flex;
   justify-content: center;
@@ -1230,10 +1236,6 @@ h4 {
   .point__content3 {
     margin-top: 3.0625rem;
   }
-}
-.point__content3 .point__text2 {
-  padding-top: 1.6875rem;
-  padding-bottom: 1.9375rem;
 }
 
 /* コース
